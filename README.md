@@ -2,7 +2,7 @@
 Project-1
 
 
-# Project Tital 
+# Project Title 
 Weekly Meal Planner
 
 # Description 
