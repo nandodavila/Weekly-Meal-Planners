@@ -26,4 +26,4 @@ featured recipes
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 https://developers.google.com/calendar/api/concepts/events-calendars  *
 
-![screenshot](./assets/images/WeeklyMealPlanWireframe.PNG)
+![screenshot](./assets/images/UpdatedWireframe.PNG)
