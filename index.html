@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weekly Meal Planner</title>
-    <link rel="stylesheet" href="stylel.css">
+    <link rel="stylesheet" href="./assets/css/stylel.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
   <body>
@@ -23,549 +23,93 @@
           </div>
     </header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="columns">
-    <div class="column is-one-quarter ">
-
-        <div class="card">
-            <div class="card-content">
-                <div class="content">
-                    <form action="/action_page.php">
-                        <label for="">Search Recepis:</label>
-                        <select id="recepies" name="Search Recepis">
-                            <option value="">cuisine</option>
-                            <option value="">diet</option>
-                            <option value="">intolerances </option>
-                            <option value="">fillIngredients</option>
-                        </select>
-                    </form>
-                    <form action="/action_page.php">
-                        <label for="">Search Nutrients:</label>
-                        <select id="diet" name="diet">
-                            <option value=""> minProtein</option>
-                            <option value="">maxProtein</option>
-                            <option value=""> minCalories</option>
-                            <option value="">maxCalories</option>
-                            <option value="">minCarbs </option>
-                            <option value="">maxCarbs</option>
-                        </select>
-
-                    </form>
-                    <form action="/action_page.php">
-                        <label for="">Search Ingredients:</label>
-                        <select id=" ingredients" name="Search Ingredients">
-                            <option value=""> cheese</option>
-                            <option value="">milk</option>
-                            <option value=""> sugar</option>
-                            <option value="">flour</option>
-                            <option value="">cinnamon </option>
-                            <option value="">pepperoni </option>
-                        </select>
-                    </form>
-                    <form action="/action_page.php">
-                        <label for="">Meal Types:</label>
-                        <select id="type" name="Meal Types">
-                            <option value=""> main course</option>
-                            <option value="">side dish</option>
-                            <option value=""> appetizer</option>
-                            <option value="">salad</option>
-                            <option value="">breakfast </option>
-
-                        </select>
-                    </form>
-                    <input type="submit">
-
-
-
+    <div class="columns">
+        <div class="column is-one-quarter ">
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="content">
+                        <form action="/action_page.php">
+                            <label for="">Search Recepis:</label>
+                            <select id="recepies" name="Search Recepis">
+                                <option value="">cuisine</option>
+                                <option value="">diet</option>
+                                <option value="">intolerances </option>
+                                <option value="">fillIngredients</option>
+                            </select>
+                        </form>
+                        <form action="/action_page.php">
+                            <label for="">Search Nutrients:</label>
+                            <select id="diet" name="diet">
+                                <option value=""> minProtein</option>
+                                <option value="">maxProtein</option>
+                                <option value=""> minCalories</option>
+                                <option value="">maxCalories</option>
+                                <option value="">minCarbs </option>
+                                <option value="">maxCarbs</option>
+                            </select>
+
+                        </form>
+                        <form action="/action_page.php">
+                            <label for="">Search Ingredients:</label>
+                            <select id=" ingredients" name="Search Ingredients">
+                                <option value=""> cheese</option>
+                                <option value="">milk</option>
+                                <option value=""> sugar</option>
+                                <option value="">flour</option>
+                                <option value="">cinnamon </option>
+                                <option value="">pepperoni </option>
+                            </select>
+                        </form>
+                        <form action="/action_page.php">
+                            <label for="">Meal Types:</label>
+                            <select id="type" name="Meal Types">
+                                <option value=""> main course</option>
+                                <option value="">side dish</option>
+                                <option value=""> appetizer</option>
+                                <option value="">salad</option>
+                                <option value="">breakfast </option>
+
+                            </select>
+                        </form>
+                        <input type="submit">
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
-        </body>
 
-</html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Mariya Form -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Calender -->
-<div class = 'column is-three-quarters'>
-    <div class="table-container">
-        <table class="table is-bordered is-hoverable is-fullwidth">
-            <thead>
-                <tr>
-                  <th class='date1'><abbr title="Date1">moment.js</abbr></th>
-                  <th class="date2"><abbr title="Date2">moment.js</abbr></th>
-                  <th class="date3"><abbr title="Date3">moment.js</abbr></th>
-                  <th class="date4"><abbr title="Date4">moment.js</abbr></th>
-                  <th class="date5"><abbr title="Date5">moment.js</abbr></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><div class="recipe1">Chosen Recipe</div></td>
-                    <td><div class="recipe2">Chosen Recipe</div></td>
-                    <td><div class="recipe3">Chosen Recipe</div></td>
-                    <td><div class="recipe4">Chosen Recipe</div></td>
-                    <td><div class="recipe5">Chosen Recipe</div></td>
-                </tr>
-        </table>
-      </div>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Fiazan Meal Cards -->
-<section class="recipes">
-    <div class="tile is-ancestor">
-    <div class="tile is-parent">
-        <article class="tile is-child box">
-        <div class="card-image">
-            <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
+        <div class = 'column is-three-quarters'>
+            <div class="table-container">
+                <table class="table is-bordered is-hoverable is-fullwidth">
+                    <thead>
+                        <tr>
+                        <th class='date1'><abbr title="Date1">moment.js</abbr></th>
+                        <th class="date2"><abbr title="Date2">moment.js</abbr></th>
+                        <th class="date3"><abbr title="Date3">moment.js</abbr></th>
+                        <th class="date4"><abbr title="Date4">moment.js</abbr></th>
+                        <th class="date5"><abbr title="Date5">moment.js</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="recipe1">Chosen Recipe</div></td>
+                            <td><div class="recipe2">Chosen Recipe</div></td>
+                            <td><div class="recipe3">Chosen Recipe</div></td>
+                            <td><div class="recipe4">Chosen Recipe</div></td>
+                            <td><div class="recipe5">Chosen Recipe</div></td>
+                        </tr>
+                </table>
             </div>
-            <div class="card-content">
-                <div class="media-content">
-                <p class="title is-4">Recipe Name</p>
-                </div>
-            </div>
-        
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-            </div>
-        </article>
-    </div>
-    <div class="tile is-parent">
-        <article class="tile is-child box">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media-content">
-                    <p class="title is-4">Recipe Name</p>
-                </div>
-            </div>
-            
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-            </div>
-        </article>
-        </div>
-        <div class="tile is-parent">
-        <article class="tile is-child box">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media-content">
-                    <p class="title is-4">Recipe Name</p>
-                </div>
-            </div>
-            
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-            </div>
-        </article>
-        </div>
-        <div class="tile is-parent">
-        <article class="tile is-child box">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media-content">
-                    <p class="title is-4">Recipe Name</p>
-                </div>
-            </div>
-            
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-            </div>
-        </article>
-        </div>
-        <div class="tile is-parent">
-        <article class="tile is-child box">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media-content">
-                    <p class="title is-4">Recipe Name</p>
-                </div>
-            </div>
-            
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-            </div>
-        </article>
+
         </div>
     </div>
-    <div class="tile is-ancestor">
+
+    <section class="recipes">
+        <div class="tile is-ancestor">
         <div class="tile is-parent">
             <article class="tile is-child box">
             <div class="card-image">
@@ -662,116 +206,115 @@
             </article>
             </div>
         </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Andrew Footer -->
-<footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Weekly Meal Planner</strong> by:
-            <a href="https://github.com/alifaizan786-op">Faizan Ali, </a>
-            <a href="https://github.com/andrewc411">Andrew Carroll, </a>
-            <a href="https://github.com/nandodavila">Fernando Davila, </a>
-            <a href="https://github.com/mharizanova8703">Mariya Harizanova</a>   
-      </p>
-    </div>
-  </footer>
+        <div class="tile is-ancestor">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                    </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                        <p class="title is-4">Recipe Name</p>
+                        </div>
+                    </div>
+                
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4">Recipe Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                </article>
+                </div>
+                <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4">Recipe Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                </article>
+                </div>
+                <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4">Recipe Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                </article>
+                </div>
+                <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4">Recipe Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                    </div>
+                </article>
+            </div>
+         </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+        <p>
+            <strong>Weekly Meal Planner</strong> by:
+                <a href="https://github.com/alifaizan786-op">Faizan Ali, </a>
+                <a href="https://github.com/andrewc411">Andrew Carroll, </a>
+                <a href="https://github.com/nandodavila">Fernando Davila, </a>
+                <a href="https://github.com/mharizanova8703">Mariya Harizanova</a>   
+        </p>
+        </div>
+    </footer>
 </body>
 </html>
