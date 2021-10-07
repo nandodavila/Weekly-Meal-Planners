@@ -30,49 +30,80 @@
                 <div class="card-content">
                     <div class="content">
                         <form action="/action_page.php">
-                            <label for="">Search Recepis:</label>
-                            <select id="recepies" name="Search Recepis">
-                                <option value="">cuisine</option>
-                                <option value="">diet</option>
-                                <option value="">intolerances </option>
-                                <option value="">fillIngredients</option>
+                            <label for="">Search Cuisine:</label>
+                            <select id="cuisine" name="Search Cuisine">
+                                <option value="African">African</option>
+                                <option value="American">American</option>
+                                <option value="British">British</option>
+                                <option value="Cajun">Cajun</option>
+                                <option value="Caribbean">Caribbean</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="EasternEuropean">Eastern European</option>
+                                <option value="European">European</option>
+                                <option value="French">French</option>
+                                <option value="German">German</option>
+                                <option value="Greek">Greek</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Irish">Irish</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Jewish">Jewish</option>
+                                <option value="Korean">Korean</option>
+                                <option value="LatinAmerican">Latin American</option>
+                                <option value="Mediterranean">Mediterranean</option>
+                                <option value="Mexican">Mexican</option>
+                                <option value="MiddleEastern">Middle Eastern</option>
+                                <option value="Nordic">Nordic</option>
+                                <option value="Southern">Southern</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Thai">Thai</option>
+                                <option value="Vietnamese">Vietnamese</option>
                             </select>
                         </form>
                         <form action="/action_page.php">
-                            <label for="">Search Nutrients:</label>
+                            <label for="">Diet Type:</label>
                             <select id="diet" name="diet">
-                                <option value=""> minProtein</option>
-                                <option value="">maxProtein</option>
-                                <option value=""> minCalories</option>
-                                <option value="">maxCalories</option>
-                                <option value="">minCarbs </option>
-                                <option value="">maxCarbs</option>
+                                <option value="Gluten_Free">Gluten Free</option>
+                                <option value="Ketogenic">Ketogenic</option>
+                                <option value="Vegetarian">Vegetarian</option>
+                                <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
+                                <option value="Ovo-Vegetarian">Ovo-Vegetarian</option>
+                                <option value="Pescetarian">Pescetarian</option>
+                                <option value="Paleo">Paleo</option>
+                                <option value="Primal">Primal</option>
+                                <option value="Low FODMAP">Low FODMAP</option>
+                                <option value="Whole30">Whole30</option>
                             </select>
-
                         </form>
                         <form action="/action_page.php">
-                            <label for="">Search Ingredients:</label>
-                            <select id=" ingredients" name="Search Ingredients">
-                                <option value=""> cheese</option>
-                                <option value="">milk</option>
-                                <option value=""> sugar</option>
-                                <option value="">flour</option>
-                                <option value="">cinnamon </option>
-                                <option value="">pepperoni </option>
+                            <label for="">Intolerances:</label>
+                            <select id="Intolerances" name="Intolerances">
+                                <option value="Dairy">Dairy</option>
+                                <option value="Egg">Egg</option>
+                                <option value="Gluten">Gluten</option>
+                                <option value="Grain">Grain</option>
+                                <option value="Peanut">Peanut</option>
+                                <option value="Seafood">Seafood</option>
+                                <option value="Sesame">Sesame</option>
+                                <option value="Shellfish">Shellfish</option>
+                                <option value="Soy">Soy</option>
+                                <option value="Sulfite">Sulfite</option>
+                                <option value="Tree_Nut">Tree Nut</option>
+                                <option value="Wheat">Wheat</option>
                             </select>
                         </form>
                         <form action="/action_page.php">
                             <label for="">Meal Types:</label>
                             <select id="type" name="Meal Types">
-                                <option value=""> main course</option>
-                                <option value="">side dish</option>
-                                <option value=""> appetizer</option>
-                                <option value="">salad</option>
-                                <option value="">breakfast </option>
+                                <option value="main-course"> main course</option>
+                                <option value="side-dish">side dish</option>
+                                <option value="appetizer"> appetizer</option>
+                                <option value="salad">salad</option>
+                                <option value="breakfast">breakfast </option>
 
                             </select>
                         </form>
-                        <input type="submit">
+                        <input type="submit" id="submit">
 
 
 
@@ -316,5 +347,6 @@
         </p>
         </div>
     </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
