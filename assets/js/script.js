@@ -9,8 +9,6 @@ var date5 = document.querySelector('.date5');
 var allDays = [date1, date2, date3, date4, date5];
 
 
-console.log(moment)
-console.log(startOfWeek)
 
 function getCalender() {
     date1.textContent = startOfWeek;
@@ -22,100 +20,6 @@ function getCalender() {
 }
 
 getCalender();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //recipes API
