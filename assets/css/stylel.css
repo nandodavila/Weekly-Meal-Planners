@@ -5,42 +5,53 @@
 .title is-1 {
   color: bisque;
 }
-.table {
-  font-family: 'Ephesis', cursive;
-  font-size: 19px;
-  padding: 4px;
-  margin: 50px;
-  position: center;
-  border-radius: 7px;
-  background-color: grey;
-  color: white;
-  font-size: 16px;
+#plan {
+  font-size: 45px;
+  color: antiquewhite;
+  margin: 230px;
 }
+.custom-table {
+  font-family: 'PT Serif', serif;
+  font-size: 19px;
+  padding: 5px;
+  margin: 40px;
+  position: center;
+  border-radius: 7px solid green;
+  background-color: rgba(0, 128, 68, 0.144);
+  height: 200px;
+  font-size: 16px;
+  text-align: center;
+}
+
 body {
-  background-color: black;
-  font-family: 'Italianno', cursive;
+  background-color: rgba(105, 128, 0, 0.493);
+  font-family: 'PT Serif', serif;
   padding: 20px;
 }
 .footer {
+  background-image: cover;
+
+  height: 100px;
   color: white;
   padding: 20px;
   margin: 0px;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.801);
 }
 .card {
   margin: 15px;
   background-color: cadetblue;
   font-size: 23px;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
+  box-shadow: green;
 }
 #type {
   background-color: antiquewhite;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
   font-size: 16px;
 }
 header {
   background-image: url('https://static.vecteezy.com/system/resources/previews/002/150/556/large_2x/healthy-mediterranean-diet-ingredients-for-italian-meal-on-black-background-free-photo.jpg');
-  height: 400px;
+  height: 300px;
   background-image: cover;
   background-size: 100%;
   color: white;
@@ -57,21 +68,21 @@ a {
 }
 #diet {
   background-color: antiquewhite;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
   font-size: 16px;
 }
 #cuisine {
   background-color: antiquewhite;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
 }
-#Intolerances {
+#intolerances {
   background-color: antiquewhite;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
   font-size: 16px;
 }
 #submit {
   background-color: antiquewhite;
-  font-family: 'Italianno', cursive;
+  font-family: 'PT Serif', serif;
   border-radius: 3px;
   box-shadow: black;
 }
@@ -79,4 +90,3 @@ a {
   text-align: center;
   background-color: rgba(153, 160, 95, 0.692);
 }
-

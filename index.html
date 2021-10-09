@@ -4,6 +4,9 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
     <meta charset="utf-8">
@@ -23,7 +26,7 @@
                         <div class="circle">
                             <font-awesome-icon col size="2x" :icon="['fas', 'tasks']" />
                         </div>
-                        <h1 class="title is-1">Weekly Meal Planner</h1>
+                        <h1 class="title is-1" id="plan">Weekly Meal Planner</h1>
                     </div>
                 </div>
             </div>
@@ -126,7 +129,7 @@
 
         <div class='column is-three-quarters'>
             <div class="table-container">
-                <table class="table is-bordered is-hoverable is-fullwidth">
+                <table class="table is-bordered is-hoverable is-fullwidth custom-table">
                     <thead>
                         <tr>
                             <th class='date1'><abbr title="Date1">moment.js</abbr></th>
@@ -138,19 +141,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="table">
+                            <td class="table custom-table">
                                 <div class="recipe1">Chosen Recipe</div>
                             </td>
-                            <td class="table">
+                            <td class="table custom-table">
                                 <div class="recipe2">Chosen Recipe</div>
                             </td>
-                            <td class="table">
+                            <td class="table custom-table">
                                 <div class="recipe3">Chosen Recipe</div>
                             </td>
-                            <td class="table">
+                            <td class="table custom-table">
                                 <div class="recipe4">Chosen Recipe</div>
                             </td>
-                            <td class="table">
+                            <td class="table custom-table">
                                 <div class="recipe5">Chosen Recipe</div>
                             </td>
                         </tr>
