@@ -1,6 +1,6 @@
 .recipes {
   height: 500px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .table {
   font-family: 'Ephesis', cursive;
@@ -31,4 +31,7 @@ body {
 header {
   font-size: 90px;
   color:goldenrod ;
+}
+.tile.is-child {
+  margin: 1% !important;
 }
