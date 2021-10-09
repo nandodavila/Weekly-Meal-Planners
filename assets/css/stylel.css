@@ -38,7 +38,7 @@ body {
   font-family: 'Italianno', cursive;
   font-size: 16px;
 }
-header {
+.mainHeader {
   background-image: url('https://static.vecteezy.com/system/resources/previews/002/150/556/large_2x/healthy-mediterranean-diet-ingredients-for-italian-meal-on-black-background-free-photo.jpg');
   height: 400px;
   background-image: cover;
