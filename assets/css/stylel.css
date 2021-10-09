@@ -1,6 +1,6 @@
 .recipes {
   height: 500px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .title is-1 {
   color: bisque;
@@ -46,6 +46,11 @@ header {
   color: white;
   font-size: 90px;
 }
+
+.tile.is-child {
+  margin: 1% !important;
+}
+
 a {
   color: antiquewhite;
   font-size: 16px;
