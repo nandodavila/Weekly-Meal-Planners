@@ -23,16 +23,18 @@ getCalender();
 
 
 //recipes API
-var byCuisine = document.querySelector("#cuisine")
-var byDiet = document.querySelector("#diet")
-var byIntolerances = document.querySelector("#intolerances")
-var byMealType = document.querySelector("#type")
-var submitBtn = document.querySelector("#submit")
-var recipeEL = document.querySelector(".recipeEL")
-// console.log(byCuisine.value)
-// console.log(byDiet.value)
-// console.log(byIntolerances.value)
-// console.log(byMealType.value)
+var byCuisine = document.querySelector("#cuisine") //Cuisine drop-down
+var byDiet = document.querySelector("#diet") //Diet drop-down
+var byIntolerances = document.querySelector("#intolerances") //Intolerances drop-down
+var byMealType = document.querySelector("#type") //Meal Type drop-down
+var submitBtn = document.querySelector("#submit") // Form submit 
+var recipeEL = document.querySelector(".recipeEL") // Recipe Div
+var recipeMDL = document.querySelector("#recipeMDL") // Recipe Modal Pop-up
+var closeBTN = document.querySelector(".delete") // Button to close modal
+var ingredientsLi = document.querySelector("#ingredientsLi")
+var recipeLi = document.querySelector("#recipeLi")
+var recipeTitle = document.querySelector("#recipeTitle")
+var dishimg = document.querySelector(".dishimg")
 
 
 
@@ -41,7 +43,7 @@ var recipeEL = document.querySelector(".recipeEL")
 
 submitBtn.addEventListener("click", function(event){
     event.preventDefault()
-    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=69ee834c34f4407190db5d6decbccd2a&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
+    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=cdc2ae3f3ea444328816d92ae11c6634&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
 
     fetch(APIurl)
     .then(function(response){
@@ -53,15 +55,15 @@ submitBtn.addEventListener("click", function(event){
         var tiles = ''
     for (var i = 0 ; i < data.results.length; i++){
         tiles += 
-       '<article class="tile is-child box is-2">'+ 
-       '<div class="card-image">'+
-       '<figure class="image is-4by3">'+
-       '<img src="'+data.results[i].image+'" alt="Placeholder image">'+
+       '<article id="' +data.results[i].id +'"class="tile is-child box is-2">'+ 
+       '<div id="' +data.results[i].id +'"class="card-image">'+
+       '<figure id="' +data.results[i].id +'" class="image is-4by3">'+
+       '<img id="' +data.results[i].id +'" src="'+data.results[i].image+'" alt="Placeholder image">'+
        '</figure>'+
        '</div>'+
-       '<div class="card-content">'+
-       '<div class="media-content">'+
-       '<p class="title is-4">'+data.results[i].title+'</p>'+
+       '<div id="' +data.results[i].id +'" class="card-content">'+
+       '<div id="' +data.results[i].id +'" class="media-content">'+
+       '<p id="' +data.results[i].id +'" class="title is-4">'+data.results[i].title+'</p>'+
        '</div>'+
        '</div>'+
        '</article>'
@@ -69,4 +71,39 @@ submitBtn.addEventListener("click", function(event){
     recipeEL.innerHTML = tiles
 })
 })
+
+recipeEL.addEventListener("click", function(event){
+    console.log(event.target.id)
+    recipeMDL.classList.add("is-active")
+
+    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
+    console.log(APIurl2)
+    fetch(APIurl2)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        recipeTitle.textContent = data.title
+        recipeLi.textContent = data.instructions
+        dishimg.src = data.image
+
+        // var ingrdlist = ''
+        // for (var i = 0; i < data.extendedIngredientslength; i++ ){
+        //     ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
+        //     console.log('hi')
+        // }
+        // ingredientsLi.innerHTML = ingrdlist
+
+        
+
+    })
+
+})
+
+closeBTN.addEventListener("click", function(){
+    recipeMDL.classList.remove("is-active")
+})
+
+
 
