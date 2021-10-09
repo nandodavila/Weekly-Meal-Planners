@@ -16,26 +16,36 @@
   padding: 5px;
   margin: 40px;
   position: center;
-  border-radius: 7px solid green;
+  border-radius: 20px solid green;
   background-color: rgba(0, 128, 68, 0.144);
   height: 200px;
   font-size: 16px;
   text-align: center;
 }
-
+.calendar-button {
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.801);
+  color: black;
+}
+.calendar-add1 {
+  background-color: blanchedalmond;
+  border-radius: 7px;
+}
 body {
   background-color: rgba(105, 128, 0, 0.493);
   font-family: 'PT Serif', serif;
   padding: 20px;
 }
 .footer {
+  background-image: url('https://www.24mantra.com/wp-content/uploads/2020/11/824x465-155.png');
   background-image: cover;
-
-  height: 100px;
+  font-size: 24px;
+  height: 150px;
   color: white;
-  padding: 20px;
+  padding: px;
   margin: 0px;
-  background-color: rgba(128, 128, 128, 0.801);
+
+  background-image: 100%;
 }
 .card {
   margin: 15px;
@@ -48,6 +58,7 @@ body {
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
   font-size: 16px;
+  border-radius: 7px;
 }
 .mainHeader {
   background-image: url('https://static.vecteezy.com/system/resources/previews/002/150/556/large_2x/healthy-mediterranean-diet-ingredients-for-italian-meal-on-black-background-free-photo.jpg');
@@ -64,27 +75,37 @@ body {
 
 a {
   color: antiquewhite;
-  font-size: 16px;
+  font-size: 18px;
+  text-decoration: none;
 }
 #diet {
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
   font-size: 16px;
+  border-radius: 7px;
 }
 #cuisine {
+  font-size: 16px;
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
+  border-radius: 7px;
 }
 #intolerances {
+  border-radius: 7px;
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
   font-size: 16px;
+  border-radius: 7px;
 }
-#submit {
+#submitmeal {
+  border-radius: 9px;
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
-  border-radius: 3px;
+  width: 90px;
+  height: 30px;
   box-shadow: black;
+  font-size: 16px;
+  margin: 15px;
 }
 .card-content {
   text-align: center;
