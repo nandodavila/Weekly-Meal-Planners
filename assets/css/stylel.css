@@ -2,36 +2,81 @@
   height: 500px;
   overflow-y: scroll;
 }
+.title is-1 {
+  color: bisque;
+}
 .table {
   font-family: 'Ephesis', cursive;
   font-size: 19px;
-  padding: 20px;
+  padding: 4px;
   margin: 50px;
-  border-radius: 20px;
+  position: center;
+  border-radius: 7px;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
 }
 body {
-  font-family: 'Ephesis', cursive;
-  margin: 10px;
+  background-color: black;
+  font-family: 'Italianno', cursive;
   padding: 20px;
-  background-color: gray;
 }
 .footer {
-  padding: 30px;
-  margin: 30px;
-  background-color: goldenrod;
+  color: white;
+  padding: 20px;
+  margin: 0px;
+  background-color: grey;
 }
 .card {
-  background-color: goldenrod;
-  color: black;
+  margin: 15px;
+  background-color: cadetblue;
+  font-size: 23px;
+  font-family: 'Italianno', cursive;
 }
 #type {
-  font-family: 'Ephesis', cursive;
-  font-size: 19px;
+  background-color: antiquewhite;
+  font-family: 'Italianno', cursive;
+  font-size: 16px;
 }
 header {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/150/556/large_2x/healthy-mediterranean-diet-ingredients-for-italian-meal-on-black-background-free-photo.jpg');
+  height: 400px;
+  background-image: cover;
+  background-size: 100%;
+  color: white;
   font-size: 90px;
-  color:goldenrod ;
 }
+
 .tile.is-child {
   margin: 1% !important;
 }
+
+a {
+  color: antiquewhite;
+  font-size: 16px;
+}
+#diet {
+  background-color: antiquewhite;
+  font-family: 'Italianno', cursive;
+  font-size: 16px;
+}
+#cuisine {
+  background-color: antiquewhite;
+  font-family: 'Italianno', cursive;
+}
+#Intolerances {
+  background-color: antiquewhite;
+  font-family: 'Italianno', cursive;
+  font-size: 16px;
+}
+#submit {
+  background-color: antiquewhite;
+  font-family: 'Italianno', cursive;
+  border-radius: 3px;
+  box-shadow: black;
+}
+.card-content {
+  text-align: center;
+  background-color: rgba(153, 160, 95, 0.692);
+}
+
