@@ -155,6 +155,20 @@
                             </td>
                             <td class="table custom-table" >
                                 <div class="recipe1" id="local5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                <div class="recipe1"  ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </td>
+                            <td class="table custom-table" >
+                                <div class="recipe1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </td>
+                            <td class="table custom-table" >
+                                <div class="recipe1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </td>
+                            <td class="table custom-table" >
+                                <div class="recipe1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </td>
+                            <td class="table custom-table" >
+                                <div class="recipe1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
                             </td>
                         </tr>
                 </table>
@@ -182,7 +196,7 @@
             <img class="dishimg" src="" alt="">
             <h2>Ingredients</h2>
             <ul id="ingredientsLi">
-
+                <!-- list of ingredients -->
             </ul>
             <h2>Recipe</h2>
             <p><span id="recipeLi"></span></p>
@@ -190,6 +204,21 @@
         </div>
       </div>
       <!-- Recipe Empty Modal End -->
+
+      <div id="calendarModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title"><span id="modal-date"></span></p>
+            <button class="delete mdl-delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <img class="dishimg" src="" alt="">
+            <button id="authorize_button">Authorize</button>
+            <button id="signout_button">Sign Out</button>
+          </section>
+        </div>
+      </div>
 
     <footer class="footer">
         <div class="content has-text-centered">

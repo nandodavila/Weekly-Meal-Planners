@@ -36,6 +36,7 @@ var ingredientsLi = document.querySelector("#ingredientsLi")
 var recipeLi = document.querySelector("#recipeLi")
 var recipeTitle = document.querySelector("#recipeTitle")
 var dishimg = document.querySelector(".dishimg")
+ 
 
 
 
@@ -86,15 +87,15 @@ recipeEL.addEventListener("click", function(event){
     .then(function(data){
         console.log(data)
         recipeTitle.textContent = data.title
-        recipeLi.textContent = data.instructions
+        recipeLi.innerHTML = data.instructions
         dishimg.src = data.image
 
-        // var ingrdlist = ''
-        // for (var i = 0; i < data.extendedIngredientslength; i++ ){
-        //     ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
-        //     console.log('hi')
-        // }
-        // ingredientsLi.innerHTML = ingrdlist
+        var ingrdlist = ''
+        for (var i = 0; i < data.extendedIngredients.length; i++ ){
+            ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
+            console.log('hi')
+        }
+        ingredientsLi.innerHTML = ingrdlist
 
         
 
@@ -361,3 +362,9 @@ function allowDrop(event) {
 }
 
 var recipeLocal = [];
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById(data).setAttribute('style', "width: auto;")
+  }
+
+
