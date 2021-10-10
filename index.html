@@ -157,23 +157,6 @@
                                 <div class="recipe5">Chosen Recipe</div>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="table calendar-button custom-table">
-                                <button class="calendar-add1 ">Add to Google Calendar</button>
-                            </td>
-                            <td class="table calendar-button custom-table">
-                                <button class="calendar-add1 ">Add to Google Calendar</button>
-                            </td>
-                            <td class="table calendar-button custom-table">
-                                <button class="calendar-add1 ">Add to Google Calendar</button>
-                            </td>
-                            <td class="table calendar-button custom-table">
-                                <button class="calendar-add1 ">Add to Google Calendar</button>
-                            </td>
-                            <td class="table calendar-button custom-table">
-                                <button class="calendar-add1 ">Add to Google Calendar</button>
-                            </td>
-                        </tr>
                 </table>
             </div>
 
@@ -207,6 +190,21 @@
         </div>
       </div>
       <!-- Recipe Empty Modal End -->
+
+      <div id="calendarModal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title"><span id="modal-date"></span></p>
+            <button class="delete mdl-delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <img class="dishimg" src="" alt="">
+            <button id="authorize_button">Authorize</button>
+            <button id="signout_button">Sign Out</button>
+          </section>
+        </div>
+      </div>
 
     <footer class="footer">
         <div class="content has-text-centered">
