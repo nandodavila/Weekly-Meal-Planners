@@ -27,7 +27,7 @@ var byCuisine = document.querySelector("#cuisine") //Cuisine drop-down
 var byDiet = document.querySelector("#diet") //Diet drop-down
 var byIntolerances = document.querySelector("#intolerances") //Intolerances drop-down
 var byMealType = document.querySelector("#type") //Meal Type drop-down
-var submitBtn = document.querySelector("#submit") // Form submit 
+var submitBtn = document.querySelector("#submitmeal") // Form submit 
 var recipeEL = document.querySelector(".recipeEL") // Recipe Div
 var recipeMDL = document.querySelector("#recipeMDL") // Recipe Modal Pop-up
 var closeBTN = document.querySelector(".delete") // Button to close modal
@@ -35,6 +35,7 @@ var ingredientsLi = document.querySelector("#ingredientsLi")
 var recipeLi = document.querySelector("#recipeLi")
 var recipeTitle = document.querySelector("#recipeTitle")
 var dishimg = document.querySelector(".dishimg")
+ 
 
 
 
@@ -310,6 +311,7 @@ function loadRandomFood() {
     })
 }
 
+
 loadRandomFood();
 
 function allowDrop(event) {
@@ -326,3 +328,4 @@ function allowDrop(event) {
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).setAttribute('style', "width: auto;")
   }
+
