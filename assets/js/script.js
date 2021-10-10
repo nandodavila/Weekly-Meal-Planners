@@ -20,6 +20,7 @@ function getCalender() {
 }
 
 getCalender();
+getLocalInput();
 
 
 //recipes API
@@ -311,7 +312,6 @@ function loadRandomFood() {
     })
 }
 
-
 loadRandomFood();
 
 function allowDrop(event) {
@@ -324,8 +324,47 @@ function allowDrop(event) {
   
   function drop(event) {
     event.preventDefault();
+    console.log(event)
+    console.log(event.path[0].id)
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById(data).setAttribute('style', "width: auto;")
+    console.log(event.target)
+    console.log(data)
+    function setLocalInput() {
+        localStorage.setItem(event.path[0].id, data)
+    } 
+    setLocalInput();
+    
+    
+  } 
+
+  function getLocalInput (){
+    var recipeLocalID1 = localStorage.getItem('local1')
+    var recipeLocalID2 = localStorage.getItem('local2')
+    var recipeLocalID3 = localStorage.getItem('local3')
+    var recipeLocalID4 = localStorage.getItem('local4')
+    var recipeLocalID5 = localStorage.getItem('local5')
+    var recipeLocalID = [recipeLocalID1, recipeLocalID2, recipeLocalID3, recipeLocalID4, recipeLocalID5]
+    if (recipeLocalID) {
+        for (i=1; i < recipeLocalID.length; i++) {
+    var localStored = {
+        recipeID: JSON.parse(recipeLocalID[i]),
+        divID: 'local' + [i]
+    } 
+    // recipeLocal.push(localStored);
+    console.log(localStored)
+}
+    
+}
+    console.log(recipeLocal)
+        
+}
+
+var recipeLocal = [];
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).setAttribute('style', "width: auto;")
   }
+
 
