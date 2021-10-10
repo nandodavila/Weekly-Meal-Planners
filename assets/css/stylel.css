@@ -117,3 +117,12 @@ a {
   height: 350px;
   border: 1px solid #aaaaaa
 }
+
+#recipeMDL h2 {
+  font-weight: bold;
+}
+
+#recipeMDL li {
+  text-transform: capitalize;
+  padding-left: 4%;
+}

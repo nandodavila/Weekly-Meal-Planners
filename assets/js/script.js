@@ -86,15 +86,15 @@ recipeEL.addEventListener("click", function(event){
     .then(function(data){
         console.log(data)
         recipeTitle.textContent = data.title
-        recipeLi.textContent = data.instructions
+        recipeLi.innerHTML = data.instructions
         dishimg.src = data.image
 
-        // var ingrdlist = ''
-        // for (var i = 0; i < data.extendedIngredientslength; i++ ){
-        //     ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
-        //     console.log('hi')
-        // }
-        // ingredientsLi.innerHTML = ingrdlist
+        var ingrdlist = ''
+        for (var i = 0; i < data.extendedIngredients.length; i++ ){
+            ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
+            console.log('hi')
+        }
+        ingredientsLi.innerHTML = ingrdlist
 
         
 
