@@ -365,6 +365,6 @@ var recipeLocal = [];
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).setAttribute('style', "width: auto;")
-  }
+
 
 
