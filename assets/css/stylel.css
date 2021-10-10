@@ -111,3 +111,9 @@ a {
   text-align: center;
   background-color: rgba(153, 160, 95, 0.692);
 }
+
+.recipe1 {
+  width: 250px;
+  height: 350px;
+  border: 1px solid #aaaaaa
+}

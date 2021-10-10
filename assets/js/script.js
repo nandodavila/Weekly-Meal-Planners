@@ -20,6 +20,7 @@ function getCalender() {
 }
 
 getCalender();
+getLocalInput();
 
 
 //recipes API
@@ -27,7 +28,7 @@ var byCuisine = document.querySelector("#cuisine") //Cuisine drop-down
 var byDiet = document.querySelector("#diet") //Diet drop-down
 var byIntolerances = document.querySelector("#intolerances") //Intolerances drop-down
 var byMealType = document.querySelector("#type") //Meal Type drop-down
-var submitBtn = document.querySelector("#submit") // Form submit 
+var submitBtn = document.querySelector("#submitmeal") // Form submit 
 var recipeEL = document.querySelector(".recipeEL") // Recipe Div
 var recipeMDL = document.querySelector("#recipeMDL") // Recipe Modal Pop-up
 var closeBTN = document.querySelector(".delete") // Button to close modal
@@ -55,7 +56,7 @@ submitBtn.addEventListener("click", function(event){
         var tiles = ''
     for (var i = 0 ; i < data.results.length; i++){
         tiles += 
-       '<article id="' +data.results[i].id +'"class="tile is-child box is-2">'+ 
+       '<article id="' +data.results[i].id +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)">'+ 
        '<div id="' +data.results[i].id +'"class="card-image">'+
        '<figure id="' +data.results[i].id +'" class="image is-4by3">'+
        '<img id="' +data.results[i].id +'" src="'+data.results[i].image+'" alt="Placeholder image">'+
@@ -107,3 +108,256 @@ closeBTN.addEventListener("click", function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var mainHeader = document.querySelector('.mainHeader')
+function loadRandomFood() {
+    var apiURL3 = "https://foodish-api.herokuapp.com/api/"
+    fetch(apiURL3)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        mainHeader.setAttribute('style', "background-image: url(" + data.image + "); background-position: center")
+       
+    })
+}
+
+loadRandomFood();
+
+function allowDrop(event) {
+    event.preventDefault();
+  }
+  
+  function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+  }
+  
+  function drop(event) {
+    event.preventDefault();
+    console.log(event)
+    console.log(event.path[0].id)
+    var data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById(data).setAttribute('style', "width: auto;")
+    console.log(event.target)
+    console.log(data)
+    function setLocalInput() {
+        localStorage.setItem(event.path[0].id, data)
+    } 
+    setLocalInput();
+    
+    
+  } 
+
+  function getLocalInput (){
+    var recipeLocalID1 = localStorage.getItem('local1')
+    var recipeLocalID2 = localStorage.getItem('local2')
+    var recipeLocalID3 = localStorage.getItem('local3')
+    var recipeLocalID4 = localStorage.getItem('local4')
+    var recipeLocalID5 = localStorage.getItem('local5')
+    var recipeLocalID = [recipeLocalID1, recipeLocalID2, recipeLocalID3, recipeLocalID4, recipeLocalID5]
+    if (recipeLocalID) {
+        for (i=1; i < recipeLocalID.length; i++) {
+    var localStored = {
+        recipeID: JSON.parse(recipeLocalID[i]),
+        divID: 'local' + [i]
+    } 
+    // recipeLocal.push(localStored);
+    console.log(localStored)
+}
+    
+}
+    console.log(recipeLocal)
+        
+}
+
+var recipeLocal = [];
