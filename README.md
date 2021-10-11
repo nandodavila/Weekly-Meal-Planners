@@ -13,17 +13,18 @@ Along with paying attention to eating habits and weekly spending.
 ## User Story
 ```
 AS A Full-time worker and Part time student
-I WANT to be able to plan my weekly meals
-SO THAT I can plan my grocery list accordenly 
+I WANT TO be able to plan my weekly meals
+SO THAT I can plan my grocery list accordingly 
 ```
 
 
-### If we Have time
-featured recipes 
+### Ideas for Future Development
+Add remove recipe button to calendar
+Featured recipes 
 
 ## APIs used 
 
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 https://developers.google.com/calendar/api/concepts/events-calendars  *
 
-![screenshot](./assets/images/UpdatedWireframe.PNG)
+![image](https://user-images.githubusercontent.com/88997322/136865162-658cd3bc-7b11-4b14-a4d8-1a6064926f4f.png)
