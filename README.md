@@ -35,4 +35,5 @@ https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 https://foodish-api.herokuapp.com/
 
 
-![image](https://user-images.githubusercontent.com/88997322/136865834-9a70cb83-604b-4b83-9b10-c8c3a9d86609.png)
+![image](https://user-images.githubusercontent.com/88997322/136867556-414e5f73-6b59-4c98-baa4-2c5feee637db.png)
+
