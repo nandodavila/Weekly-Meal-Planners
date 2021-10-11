@@ -34,4 +34,5 @@ Faizan, Mariya, Fernando and Andrew contributed ALL of the HTML file.
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 https://developers.google.com/calendar/api/concepts/events-calendars
 
+assets/images/UpdatedWireFrame.PNG
 ![image](https://user-images.githubusercontent.com/88997322/136865834-9a70cb83-604b-4b83-9b10-c8c3a9d86609.png)
