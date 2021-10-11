@@ -24,15 +24,15 @@ Featured recipes
 ```
 
 ## Breakdown of Tasks
-'''
+```
 Fernando and Faizan contributed MOST of the JavaScript file.
 Andrew and Mariya contributed MOST of the CSS file.
 Faizan, Mariya, Fernando and Andrew contributed ALL of the HTML file.
-'''
+```
 ## APIs used 
 
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
 https://developers.google.com/calendar/api/concepts/events-calendars
 
-assets/images/UpdatedWireFrame.PNG
+
 ![image](https://user-images.githubusercontent.com/88997322/136865834-9a70cb83-604b-4b83-9b10-c8c3a9d86609.png)
