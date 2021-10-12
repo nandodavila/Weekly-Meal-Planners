@@ -12,6 +12,15 @@ I WANT TO be able to plan my weekly meals
 SO THAT I can plan my grocery list accordingly 
 ```
 
+### Technologies Used
+```
+LocalStorage
+API
+HTML
+CSS
+JavaScript
+Bulma
+```
 ### Ideas for Future Development
 ```
 Add remove recipe button to calendar
