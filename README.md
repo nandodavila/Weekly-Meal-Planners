@@ -33,7 +33,7 @@ https://foodish-api.herokuapp.com/
 ![image](https://user-images.githubusercontent.com/88997322/136867556-414e5f73-6b59-4c98-baa4-2c5feee637db.png)
 
 ## PowerPoint Presentation
-https://docs.google.com/presentation/d/e/2PACX-1vSb4BZCpBkIka91APyI5mo8aHw1_pJmqW4O9[…]jWpe0aNLXv4pGNp_T7hGI/pub?start=false&loop=false&delayms=3000
+https://docs.google.com/presentation/d/1L0wPwWVJx5r_drajc4s89Twu00_CoFbnbWu0jC509L0/edit?usp=sharing
 
 ## Deployed App
 https://nandodavila.github.io/Weekly-Meal-Planners/
