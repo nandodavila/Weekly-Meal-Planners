@@ -1,9 +1,4 @@
-# Weekly-Meal-Planners
-Project-1
-
-
-# Project Title 
-Weekly Meal Planner
+# Weekly-Meal-Planner
 
 # Description 
 An App designed to help busy, healthy, and hungry people; plan their weekly meals. 
@@ -37,3 +32,5 @@ https://foodish-api.herokuapp.com/
 
 ![image](https://user-images.githubusercontent.com/88997322/136867556-414e5f73-6b59-4c98-baa4-2c5feee637db.png)
 
+## Deployed App
+https://nandodavila.github.io/Weekly-Meal-Planners/
