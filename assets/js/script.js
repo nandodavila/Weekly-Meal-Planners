@@ -202,6 +202,7 @@ window.onload = function(){
     '</article>'
     })
 
+
     var localid3 = localStorage.getItem("local3")
     var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid3)

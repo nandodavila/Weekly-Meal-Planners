@@ -13,17 +13,27 @@ Along with paying attention to eating habits and weekly spending.
 ## User Story
 ```
 AS A Full-time worker and Part time student
-I WANT to be able to plan my weekly meals
-SO THAT I can plan my grocery list accordenly 
+I WANT TO be able to plan my weekly meals
+SO THAT I can plan my grocery list accordingly 
 ```
 
+### Ideas for Future Development
+```
+Add remove recipe button to calendar
+Featured recipes 
+```
 
-### If we Have time
-featured recipes 
-
+## Breakdown of Tasks
+```
+Fernando and Faizan contributed MOST of the JavaScript file.
+Andrew and Mariya contributed MOST of the CSS file.
+Faizan, Mariya, Fernando and Andrew contributed ALL of the HTML file.
+```
 ## APIs used 
-
+```
 https://spoonacular.com/food-api/docs#Search-Recipes-Complex
-https://developers.google.com/calendar/api/concepts/events-calendars  *
+https://foodish-api.herokuapp.com/
+```
 
-![screenshot](./assets/images/UpdatedWireframe.PNG)
+![image](https://user-images.githubusercontent.com/88997322/136867556-414e5f73-6b59-4c98-baa4-2c5feee637db.png)
+
