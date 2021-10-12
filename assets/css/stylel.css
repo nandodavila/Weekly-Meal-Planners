@@ -97,11 +97,11 @@ a {
   font-size: 16px;
   border-radius: 7px;
 }
-#submitmeal {
+.button-style {
   border-radius: 9px;
   background-color: antiquewhite;
   font-family: 'PT Serif', serif;
-  width: 90px;
+  width: 120px;
   height: 30px;
   box-shadow: black;
   font-size: 16px;

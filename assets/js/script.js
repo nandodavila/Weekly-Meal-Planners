@@ -279,3 +279,14 @@ window.onload = function(){
 }
 
 }
+
+var clearRecipeBtn = document.querySelector(".clear-recipes")
+clearRecipeBtn.addEventListener('click', function() {
+    localStorage.clear();
+    local1.innerHTML = ''
+    local2.innerHTML = ''
+    local3.innerHTML = ''
+    local4.innerHTML = ''
+    local5.innerHTML = ''
+    
+})
