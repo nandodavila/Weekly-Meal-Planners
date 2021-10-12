@@ -18,10 +18,10 @@
 </head>
 
 <body>
-    <header class="mainHeader" >
+    <header class="mainHeader">
         <div class="features">
             <div class="container">
-                <div class="columns is-centered is-vcentered is-mobile">
+                <div class="columns is-centered is-vcentered ">
                     <div class="column is-narrow has-text-centered">
                         <div class="circle">
                             <font-awesome-icon col size="2x" :icon="['fas', 'tasks']" />
@@ -142,19 +142,24 @@
                     <tbody>
                         <tr>
                             <td class="table custom-table ">
-                                <div class="recipe1" id="local1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                <div class="recipe1" id="local1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </td>
-                            <td class="table custom-table" >
-                                <div class="recipe1" id="local2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <td class="table custom-table">
+                                <div class="recipe1" id="local2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </td>
-                            <td class="table custom-table" >
-                                <div class="recipe1" id="local3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <td class="table custom-table">
+                                <div class="recipe1" id="local3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </td>
-                            <td class="table custom-table" >
-                                <div class="recipe1" id="local4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <td class="table custom-table">
+                                <div class="recipe1" id="local4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </td>
-                            <td class="table custom-table" >
-                                <div class="recipe1" id="local5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <td class="table custom-table">
+                                <div class="recipe1" id="local5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                </div>
                             </td>
                         </tr>
                 </table>
@@ -174,22 +179,22 @@
     <div id="recipeMDL" class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title"><span id="recipeTitle"></span></p>
-            <button class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-            <img class="dishimg" src="" alt="">
-            <h2>Ingredients</h2>
-            <ul id="ingredientsLi">
-                <!-- list of ingredients -->
-            </ul>
-            <h2>Recipe</h2>
-            <p><span id="recipeLi"></span></p>
-          </section>
+            <header class="modal-card-head">
+                <p class="modal-card-title"><span id="recipeTitle"></span></p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <img class="dishimg" src="" alt="">
+                <h2>Ingredients</h2>
+                <ul id="ingredientsLi">
+                    <!-- list of ingredients -->
+                </ul>
+                <h2>Recipe</h2>
+                <p><span id="recipeLi"></span></p>
+            </section>
         </div>
-      </div>
-      <!-- Recipe Empty Modal End -->
+    </div>
+    <!-- Recipe Empty Modal End -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
