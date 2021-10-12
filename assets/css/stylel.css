@@ -8,7 +8,7 @@
 #plan {
   font-size: 45px;
   color: antiquewhite;
-  margin: 230px;
+  margin: 5px;
 }
 .custom-table {
   font-family: 'PT Serif', serif;
@@ -114,7 +114,7 @@ a {
 .recipe1 {
   width: 250px;
   height: 350px;
-  border: 1px solid #aaaaaa
+  border: 1px solid #aaaaaa;
 }
 
 #recipeMDL h2 {
