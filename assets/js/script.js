@@ -35,6 +35,7 @@ var ingredientsLi = document.querySelector("#ingredientsLi")
 var recipeLi = document.querySelector("#recipeLi")
 var recipeTitle = document.querySelector("#recipeTitle")
 var dishimg = document.querySelector(".dishimg")
+var error = document.querySelector("#error")
  
 
 
@@ -51,7 +52,12 @@ submitBtn.addEventListener("click", function(event){
     return response.json()
     })
     .then(function(data){
-        console.log(data)
+    if (!data.results.length){
+        error.textContent = "There are no recipes availbale in this selction, Please try another selection."
+    }
+    else{
+        error.textContent = ""
+    }    
 
         var tiles = ''
     for (var i = 0 ; i < data.results.length; i++){
