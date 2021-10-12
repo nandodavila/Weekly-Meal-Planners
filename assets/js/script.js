@@ -20,7 +20,6 @@ function getCalender() {
 }
 
 getCalender();
-getLocalInput();
 
 
 //recipes API
@@ -45,7 +44,7 @@ var dishimg = document.querySelector(".dishimg")
 
 submitBtn.addEventListener("click", function(event){
     event.preventDefault()
-    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=cdc2ae3f3ea444328816d92ae11c6634&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
+    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=69ee834c34f4407190db5d6decbccd2a&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
 
     fetch(APIurl)
     .then(function(response){
@@ -78,7 +77,7 @@ recipeEL.addEventListener("click", function(event){
     console.log(event.target.id)
     recipeMDL.classList.add("is-active")
 
-    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
+    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     console.log(APIurl2)
     fetch(APIurl2)
     .then(function(response){
@@ -106,196 +105,6 @@ recipeEL.addEventListener("click", function(event){
 closeBTN.addEventListener("click", function(){
     recipeMDL.classList.remove("is-active")
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 var mainHeader = document.querySelector('.mainHeader')
@@ -329,6 +138,7 @@ function allowDrop(event) {
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).setAttribute('style', "width: auto;")
+    
     console.log(event.target)
     console.log(data)
     function setLocalInput() {
@@ -339,32 +149,123 @@ function allowDrop(event) {
     
   } 
 
-  function getLocalInput (){
-    var recipeLocalID1 = localStorage.getItem('local1')
-    var recipeLocalID2 = localStorage.getItem('local2')
-    var recipeLocalID3 = localStorage.getItem('local3')
-    var recipeLocalID4 = localStorage.getItem('local4')
-    var recipeLocalID5 = localStorage.getItem('local5')
-    var recipeLocalID = [recipeLocalID1, recipeLocalID2, recipeLocalID3, recipeLocalID4, recipeLocalID5]
-    if (recipeLocalID) {
-        for (i=1; i < recipeLocalID.length; i++) {
-    var localStored = {
-        recipeID: JSON.parse(recipeLocalID[i]),
-        divID: 'local' + [i]
-    } 
-    // recipeLocal.push(localStored);
-    console.log(localStored)
-}
+var local1 = document.querySelector("#local1")
+var local2 = document.querySelector("#local2")
+var local3 = document.querySelector("#local3")
+var local4 = document.querySelector("#local4")
+var local5 = document.querySelector("#local5")
+
+
+window.onload = function(){
     
+    var localid1 = localStorage.getItem("local1")
+    var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    fetch(apiurlid1)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        local1.innerHTML = '<article id="' +localid1 +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)" style="width:auto;" >'+ 
+    '<div id="' +localid1 +'"class="card-image">'+
+    '<figure id="' +localid1 +'" class="image is-4by3">'+
+    '<img id="' +localid1 +'" src="'+ data.image+'" alt="Placeholder image">'+
+    '</figure>'+
+    '</div>'+
+    '<div id="' +localid1 +'" class="card-content">'+
+    '<div id="' +localid1 +'" class="media-content">'+
+    '<p id="' +localid1 +'" class="title is-4">'+data.title+'</p>'+
+    '</div>'+
+    '</div>'+
+    '</article>'
+    })
+
+    var localid2 = localStorage.getItem("local2")
+    var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    fetch(apiurlid2)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        local2.innerHTML = '<article id="' +localid2 +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)" style="width:auto;" >'+ 
+    '<div id="' +localid2 +'"class="card-image">'+
+    '<figure id="' +localid2 +'" class="image is-4by3">'+
+    '<img id="' +localid2 +'" src="'+ data.image+'" alt="Placeholder image">'+
+    '</figure>'+
+    '</div>'+
+    '<div id="' +localid2 +'" class="card-content">'+
+    '<div id="' +localid2 +'" class="media-content">'+
+    '<p id="' +localid2 +'" class="title is-4">'+data.title+'</p>'+
+    '</div>'+
+    '</div>'+
+    '</article>'
+    })
+
+    var localid3 = localStorage.getItem("local3")
+    var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    fetch(apiurlid3)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        local3.innerHTML = '<article id="' +localid3 +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)" style="width:auto;" >'+ 
+    '<div id="' +localid3 +'"class="card-image">'+
+    '<figure id="' +localid3 +'" class="image is-4by3">'+
+    '<img id="' +localid3 +'" src="'+ data.image+'" alt="Placeholder image">'+
+    '</figure>'+
+    '</div>'+
+    '<div id="' +localid3 +'" class="card-content">'+
+    '<div id="' +localid3 +'" class="media-content">'+
+    '<p id="' +localid3 +'" class="title is-4">'+data.title+'</p>'+
+    '</div>'+
+    '</div>'+
+    '</article>'
+    })
+
+    var localid4 = localStorage.getItem("local4")
+    var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    fetch(apiurlid4)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        local4.innerHTML = '<article id="' +localid4 +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)" style="width:auto;" >'+ 
+    '<div id="' +localid4 +'"class="card-image">'+
+    '<figure id="' +localid4 +'" class="image is-4by3">'+
+    '<img id="' +localid4 +'" src="'+ data.image+'" alt="Placeholder image">'+
+    '</figure>'+
+    '</div>'+
+    '<div id="' +localid4 +'" class="card-content">'+
+    '<div id="' +localid4 +'" class="media-content">'+
+    '<p id="' +localid4 +'" class="title is-4">'+data.title+'</p>'+
+    '</div>'+
+    '</div>'+
+    '</article>'
+    })
+
+    var localid5 = localStorage.getItem("local5")
+    var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    fetch(apiurlid5)
+    .then(function(response){
+    return response.json()
+    })
+    .then(function(data){
+        console.log(data)
+        local5.innerHTML = '<article id="' +localid5 +'"class="tile is-child box is-2" draggable="true" ondragstart="drag(event)" style="width:auto;" >'+ 
+    '<div id="' +localid5 +'"class="card-image">'+
+    '<figure id="' +localid5 +'" class="image is-4by3">'+
+    '<img id="' +localid5 +'" src="'+ data.image+'" alt="Placeholder image">'+
+    '</figure>'+
+    '</div>'+
+    '<div id="' +localid5 +'" class="card-content">'+
+    '<div id="' +localid5 +'" class="media-content">'+
+    '<p id="' +localid5 +'" class="title is-4">'+data.title+'</p>'+
+    '</div>'+
+    '</div>'+
+    '</article>'
+    })
+
 }
-    console.log(recipeLocal)
-        
-}
-
-var recipeLocal = [];
-    var data = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(data));
-    document.getElementById(data).setAttribute('style', "width: auto;")
-  }
-
-
