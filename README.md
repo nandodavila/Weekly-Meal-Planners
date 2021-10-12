@@ -1,4 +1,4 @@
-# Weekly-Meal-Planners
+# Weekly-Meal-Planner
 
 # Description 
 An App designed to help busy, healthy, and hungry people; plan their weekly meals. 
