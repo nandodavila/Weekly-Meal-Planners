@@ -157,8 +157,8 @@ var local5 = document.querySelector("#local5")
 
 
 window.onload = function(){
-    
     var localid1 = localStorage.getItem("local1")
+    if (localid1){
     var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid1)
     .then(function(response){
@@ -179,8 +179,10 @@ window.onload = function(){
     '</div>'+
     '</article>'
     })
+}
 
     var localid2 = localStorage.getItem("local2")
+    if (localid2){
     var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid2)
     .then(function(response){
@@ -201,9 +203,11 @@ window.onload = function(){
     '</div>'+
     '</article>'
     })
+}
 
 
     var localid3 = localStorage.getItem("local3")
+    if (localid3){
     var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid3)
     .then(function(response){
@@ -224,8 +228,10 @@ window.onload = function(){
     '</div>'+
     '</article>'
     })
+}
 
     var localid4 = localStorage.getItem("local4")
+    if (localid4){
     var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid4)
     .then(function(response){
@@ -246,8 +252,10 @@ window.onload = function(){
     '</div>'+
     '</article>'
     })
+}
 
     var localid5 = localStorage.getItem("local5")
+    if (localid5) {
     var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
     fetch(apiurlid5)
     .then(function(response){
@@ -268,5 +276,6 @@ window.onload = function(){
     '</div>'+
     '</article>'
     })
+}
 
 }
