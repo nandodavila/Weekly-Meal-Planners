@@ -1,5 +1,4 @@
-
-// var moment = moment();
+// Variables & DOM selectors for the calendar
 var startOfWeek = moment().startOf('week').add(1, 'weeks').add(1, 'days').format('MM-DD-YYYY');
 var date1 = document.querySelector('.date1');
 var date2 = document.querySelector('.date2');
@@ -8,21 +7,20 @@ var date4 = document.querySelector('.date4');
 var date5 = document.querySelector('.date5');
 var allDays = [date1, date2, date3, date4, date5];
 
-
-
+// Function to Display the dates in the calendar
 function getCalender() {
     date1.textContent = startOfWeek;
     date2.textContent = moment().startOf('week').add(1, 'weeks').add(2, 'days').format('MM-DD-YYYY');
     date3.textContent = moment().startOf('week').add(1, 'weeks').add(3, 'days').format('MM-DD-YYYY')
     date4.textContent = moment().startOf('week').add(1, 'weeks').add(4, 'days').format('MM-DD-YYYY')
     date5.textContent = moment().startOf('week').add(1, 'weeks').add(5, 'days').format('MM-DD-YYYY')
-
 }
 
+// Calling the Calendar  Function
 getCalender();
 
 
-//recipes API
+// Variable & DOM selectors for the recipe section
 var byCuisine = document.querySelector("#cuisine") //Cuisine drop-down
 var byDiet = document.querySelector("#diet") //Diet drop-down
 var byIntolerances = document.querySelector("#intolerances") //Intolerances drop-down
@@ -37,28 +35,25 @@ var recipeTitle = document.querySelector("#recipeTitle")
 var dishimg = document.querySelector(".dishimg")
 var error = document.querySelector("#error")
  
-
-
-
-
-
-
+// We added a event listner to the submit button in the form.
 submitBtn.addEventListener("click", function(event){
     event.preventDefault()
-    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=69ee834c34f4407190db5d6decbccd2a&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
+    // The form takes the input and customises the API call accordingly
+    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=8010d24aef994a039f76288023a16161&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
 
     fetch(APIurl)
     .then(function(response){
     return response.json()
     })
     .then(function(data){
+// We used a error handling "IF" statement, which will display the error or not accordingly to users selection
     if (!data.results.length){
         error.textContent = "There are no recipes availbale in this selction, Please try another selection."
     }
     else{
         error.textContent = ""
     }    
-
+// Then we iterated thru the results, and used innerHTML to display results
         var tiles = ''
     for (var i = 0 ; i < data.results.length; i++){
         tiles += 
@@ -80,39 +75,37 @@ submitBtn.addEventListener("click", function(event){
 })
 
 recipeEL.addEventListener("click", function(event){
-    console.log(event.target.id)
+// "is-active" class is added to the the modal box, to have it display
     recipeMDL.classList.add("is-active")
-
-    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
-    console.log(APIurl2)
+// the id is extracted and searched in the api for it's ingredient and recipe
+    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(APIurl2)
     .then(function(response){
     return response.json()
     })
     .then(function(data){
-        console.log(data)
+// used text.content to display the title
         recipeTitle.textContent = data.title
+// used innerHTML to display instructions        
         recipeLi.innerHTML = data.instructions
+// we used .src to display the recipe image        
         dishimg.src = data.image
-
+// we iterated thru the ingredient list to have it display as a list
         var ingrdlist = ''
         for (var i = 0; i < data.extendedIngredients.length; i++ ){
             ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
             console.log('hi')
         }
         ingredientsLi.innerHTML = ingrdlist
-
-        
-
     })
-
 })
 
+// removed "is-active" class to hide the modal
 closeBTN.addEventListener("click", function(){
     recipeMDL.classList.remove("is-active")
 })
 
-
+// api for the random images display in header
 var mainHeader = document.querySelector('.mainHeader')
 function loadRandomFood() {
     var apiURL3 = "https://foodish-api.herokuapp.com/api/"
@@ -121,7 +114,7 @@ function loadRandomFood() {
         return response.json()
     })
     .then(function(data){
-        console.log(data)
+// using set attribut to set the image url
         mainHeader.setAttribute('style', "background-image: url(" + data.image + "); background-position: center")
        
     })
@@ -129,24 +122,21 @@ function loadRandomFood() {
 
 loadRandomFood();
 
+
 function allowDrop(event) {
     event.preventDefault();
   }
-  
+// Allows the tiles to be dragged from original place  
   function drag(event) {
     event.dataTransfer.setData("text", event.target.id);
   }
-  
+// Allows the tiles to be dropped into the calendar
   function drop(event) {
     event.preventDefault();
-    console.log(event)
-    console.log(event.path[0].id)
     var data = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(data));
     document.getElementById(data).setAttribute('style', "width: auto;")
-    
-    console.log(event.target)
-    console.log(data)
+// saves recipes in local storage
     function setLocalInput() {
         localStorage.setItem(event.path[0].id, data)
     } 
@@ -155,6 +145,8 @@ function allowDrop(event) {
     
   } 
 
+
+// variable & DOM Selectors to get the recipe tiles from the local storage
 var local1 = document.querySelector("#local1")
 var local2 = document.querySelector("#local2")
 var local3 = document.querySelector("#local3")
@@ -165,7 +157,7 @@ var local5 = document.querySelector("#local5")
 window.onload = function(){
     var localid1 = localStorage.getItem("local1")
     if (localid1){
-    var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(apiurlid1)
     .then(function(response){
     return response.json()
@@ -189,7 +181,7 @@ window.onload = function(){
 
     var localid2 = localStorage.getItem("local2")
     if (localid2){
-    var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(apiurlid2)
     .then(function(response){
     return response.json()
@@ -214,7 +206,7 @@ window.onload = function(){
 
     var localid3 = localStorage.getItem("local3")
     if (localid3){
-    var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(apiurlid3)
     .then(function(response){
     return response.json()
@@ -238,7 +230,7 @@ window.onload = function(){
 
     var localid4 = localStorage.getItem("local4")
     if (localid4){
-    var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(apiurlid4)
     .then(function(response){
     return response.json()
@@ -262,7 +254,7 @@ window.onload = function(){
 
     var localid5 = localStorage.getItem("local5")
     if (localid5) {
-    var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=69ee834c34f4407190db5d6decbccd2a"
+    var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=8010d24aef994a039f76288023a16161"
     fetch(apiurlid5)
     .then(function(response){
     return response.json()
@@ -296,3 +288,5 @@ clearRecipeBtn.addEventListener('click', function() {
     local5.innerHTML = ''
     
 })
+
+
