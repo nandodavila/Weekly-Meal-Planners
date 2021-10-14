@@ -39,7 +39,7 @@ var error = document.querySelector("#error")
 submitBtn.addEventListener("click", function(event){
     event.preventDefault()
     // The form takes the input and customises the API call accordingly
-    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=8010d24aef994a039f76288023a16161&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
+    var APIurl='https://api.spoonacular.com/recipes/complexSearch/?apiKey=cdc2ae3f3ea444328816d92ae11c6634&number=100&cuisine='+byCuisine.value+'&diet='+byDiet.value+'&intolerances='+byIntolerances.value+'&type='+byMealType.value
 
     fetch(APIurl)
     .then(function(response){
@@ -78,7 +78,7 @@ recipeEL.addEventListener("click", function(event){
 // "is-active" class is added to the the modal box, to have it display
     recipeMDL.classList.add("is-active")
 // the id is extracted and searched in the api for it's ingredient and recipe
-    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var APIurl2= "https://api.spoonacular.com/recipes/"+ event.target.id +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(APIurl2)
     .then(function(response){
     return response.json()
@@ -93,7 +93,7 @@ recipeEL.addEventListener("click", function(event){
 // we iterated thru the ingredient list to have it display as a list
         var ingrdlist = ''
         for (var i = 0; i < data.extendedIngredients.length; i++ ){
-            ingrdlist += '<li>' + data.extendedIngredients[i].name + '</li>'
+            ingrdlist +=  '<li><a href="https://www.kroger.com/search?query=' + data.extendedIngredients[i].name + '&searchType=default_search&fulfillment=all">' + data.extendedIngredients[i].name + '</a></li>'//'<li>' + data.extendedIngredients[i].name + '</li>' 
             console.log('hi')
         }
         ingredientsLi.innerHTML = ingrdlist
@@ -157,7 +157,7 @@ var local5 = document.querySelector("#local5")
 window.onload = function(){
     var localid1 = localStorage.getItem("local1")
     if (localid1){
-    var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var apiurlid1 = "https://api.spoonacular.com/recipes/"+ localid1 +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(apiurlid1)
     .then(function(response){
     return response.json()
@@ -181,7 +181,7 @@ window.onload = function(){
 
     var localid2 = localStorage.getItem("local2")
     if (localid2){
-    var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var apiurlid2 = "https://api.spoonacular.com/recipes/"+ localid2 +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(apiurlid2)
     .then(function(response){
     return response.json()
@@ -206,7 +206,7 @@ window.onload = function(){
 
     var localid3 = localStorage.getItem("local3")
     if (localid3){
-    var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var apiurlid3 = "https://api.spoonacular.com/recipes/"+ localid3 +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(apiurlid3)
     .then(function(response){
     return response.json()
@@ -230,7 +230,7 @@ window.onload = function(){
 
     var localid4 = localStorage.getItem("local4")
     if (localid4){
-    var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var apiurlid4 = "https://api.spoonacular.com/recipes/"+ localid4 +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(apiurlid4)
     .then(function(response){
     return response.json()
@@ -254,7 +254,7 @@ window.onload = function(){
 
     var localid5 = localStorage.getItem("local5")
     if (localid5) {
-    var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=8010d24aef994a039f76288023a16161"
+    var apiurlid5 = "https://api.spoonacular.com/recipes/"+ localid5 +"/information?apiKey=cdc2ae3f3ea444328816d92ae11c6634"
     fetch(apiurlid5)
     .then(function(response){
     return response.json()

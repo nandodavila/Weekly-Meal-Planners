@@ -125,3 +125,7 @@ a {
   text-transform: capitalize;
   padding-left: 4%;
 }
+
+#ingredientsLi a {
+  color: black;
+}
